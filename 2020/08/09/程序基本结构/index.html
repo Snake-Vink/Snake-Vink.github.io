@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一个C++程序, Vink">
+    <meta name="keywords" content="程序基本结构与算术运算, Vink">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一个C++程序 | Vink</title>
+    <title>程序基本结构与算术运算 | Vink</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一个C++程序</h1>
+                    <h1 class="description center-align post-title">程序基本结构与算术运算</h1>
                 </div>
             </div>
         </div>
@@ -471,13 +471,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一个C-程序"><a href="#第一个C-程序" class="headerlink" title="第一个C++程序"></a>第一个C++程序</h1><blockquote>
+                <h1 id="程序基本结构与算术运算"><a href="#程序基本结构与算术运算" class="headerlink" title="程序基本结构与算术运算"></a>程序基本结构与算术运算</h1><blockquote>
 <p>本文是用于记录C++的知识,<br>所有文章除特別声明外,均采用CC BY 4.0许可协议。<br>若需转载请先通知作者,并注明来源!</p>
 </blockquote>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="http://localhost:4000/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">下一章传送门</a><br><strong>eg.1.1</strong> Hello World !</p>
-<blockquote>
-<p>编写一个程序,输出”Hello World!”<br>程序如下:</p>
+<p><a target="_blank" rel="noopener" href="https://snake-vink.github.io/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">上一章传送门</a><br><br> 先回顾一下上一章的程序:</p>
 </blockquote>
 <pre><code>#include &lt;iostream&gt;
 using namespace std;
@@ -486,8 +484,38 @@ int main() &#123;
     return 0;
 &#125;</code></pre>
 <blockquote>
-<p>代码 github 地址: <a target="_blank" rel="noopener" href="https://github.com/Snake-Vink/C-plus-plus-note/blob/master/Hello%20World.cpp">Hello World.cpp</a><br><br><a target="_blank" rel="noopener" href="http://localhost:4000/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">下一章传送门</a></p>
+<p>首先我们先看看第一排:</p>
 </blockquote>
+<pre><code>#include &lt;iostream&gt;</code></pre>
+<blockquote>
+<p>这排有什么用呢? include在英语中是”包含”的意思,<br>“iostream”是C++里的一个头文件,顾名思义,<br>这一排是用来调用”iostream”这个头文件的,<br>那这个头文件又有什么用呢?我们稍后会提起。<br><br>再来看看第二排:</p>
+</blockquote>
+<pre><code>using namespace std;</code></pre>
+<blockquote>
+<p>同样的,这排代码翻译过来就是”使用命名空间std”的意思。<br>那这一排有什么用呢?同样,我们待会儿会和”iostream”一起提起。<br><br>接着,是第三排:</p>
+</blockquote>
+<pre><code>int main() &#123;</code></pre>
+<blockquote>
+<p>首先看看”int”,这个词在C++中是一个数据类型,用于储存整数,<br>而”main”翻译一下就是”主函数”的意思,在很多编程语言中都有<br>这个”main”,在这就不过多解释。<br>最后很显然最右边的花括号是和最后一排的花括号匹配的,所以<br>它们之间的代码都是主函数内的。<br><br>然后来到了重头戏,第四排:</p>
+</blockquote>
+<pre><code>cout &lt;&lt; &quot;Hello World!&quot;;</code></pre>
+<blockquote>
+<p>这排代码是这个程序的”主要工作者”,我们来慢慢分析。<br><br> 首先回顾一下前面的”iostream”和”std”:<br><br> iostream这个头文件,提供了标准输入输出流的语句,<br>也就是说,这个头文件,是用来输出文字的。<br><br> 而std是一个命名空间,也包含在iostream中,<br>里面有常用的标准输出流cout语句等等。<br>如果不写第二行,则这行代码就要写成:</p>
+</blockquote>
+<pre><code>std::cout &lt;&lt; &quot;Hello World!&quot;;</code></pre>
+<blockquote>
+<p><br> 最后来看最后一句:</p>
+</blockquote>
+<pre><code>return 0;</code></pre>
+<blockquote>
+<p>这一行的意思就是”返回一个0值”,<br>也就是告诉电脑:”我正常的运行完毕了”,<br>如果返回非零值,就是告诉电脑:”我遇到点问题,停止运行吧!”。</p>
+<p><br> 我们现在来简要的分析一下一个C++程序的基本结构:</p>
+</blockquote>
+<pre><code>1.头文件部分(准确来说,应该是预处理部分)
+2.命名空间部分
+3.主函数(其实在这之前,应该有一个定义函数的部分)</code></pre>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://snake-vink.github.io/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">上一章传送门</a></p>
 </blockquote>
 
             </div>
@@ -514,7 +542,7 @@ int main() &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">http://yoursite.com/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/</a>
+                    <a href="http://yoursite.com/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">http://yoursite.com/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -598,7 +626,7 @@ int main() &#123;
         repo: 'Snake-Vink.github.io',
         owner: 'Snake-Vink',
         admin: ["Snake-Vink"],
-        id: '2020-08-09T19-22-07',
+        id: '2020-08-09T20-48-16',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -622,9 +650,10 @@ int main() &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
@@ -642,9 +671,9 @@ int main() &#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -657,6 +686,7 @@ int main() &#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -675,31 +705,31 @@ int main() &#123;
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/05/Update-of-Vink/">
+                <a href="/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="About some update of Vink">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="第一个C++程序">
                         
-                        <span class="card-title">About some update of Vink</span>
+                        <span class="card-title">第一个C++程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            About some update of Vink
+                            第一个C++程序
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%AC%E5%B8%83/" class="post-category">
-                                    公布
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -709,12 +739,8 @@ int main() &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%AC%E5%B8%83/">
-                        <span class="chip bg-color">公布</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9B%B4%E6%96%B0/">
-                        <span class="chip bg-color">更新</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
