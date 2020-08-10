@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="程序基本结构与算术运算, Vink">
+    <meta name="keywords" content="C++程序基本结构, Vink">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>程序基本结构与算术运算 | Vink</title>
+    <title>C++程序基本结构 | Vink</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">程序基本结构与算术运算</h1>
+                    <h1 class="description center-align post-title">C++程序基本结构</h1>
                 </div>
             </div>
         </div>
@@ -471,53 +471,79 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="程序基本结构与算术运算"><a href="#程序基本结构与算术运算" class="headerlink" title="程序基本结构与算术运算"></a>程序基本结构与算术运算</h1><blockquote>
-<p>本文是用于记录C++的知识,<br>所有文章除特別声明外,均采用CC BY 4.0许可协议。<br>若需转载请先通知作者,并注明来源!</p>
-</blockquote>
+                <h1 id="C-程序基本结构"><a href="#C-程序基本结构" class="headerlink" title="C++程序基本结构"></a>C++程序基本结构</h1><hr>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://snake-vink.github.io/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">上一章传送门</a><br><br> 先回顾一下上一章的程序:</p>
+<p>本博客所有文章除特別声明外,均采用CC BY 4.0许可协议。<br>若需转载请先通知作者,并注明来源!</p>
 </blockquote>
+<hr>
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><hr>
+<p>本文是C++笔记,在阅读下问之前,请先配置好编译器。</p>
+<hr>
+<h2 id="2-第一个C-程序"><a href="#2-第一个C-程序" class="headerlink" title="2. 第一个C++程序"></a>2. 第一个C++程序</h2><hr>
+<p><strong>e.g 1.1 Hello World!</strong></p>
+<ul>
+<li>题目描述:<br>  编写一个程序,输出”Hello World!”</li>
+<li>样例代码:</li>
+</ul>
 <pre><code>#include &lt;iostream&gt;
 using namespace std;
 int main() &#123;
-    cout &lt;&lt; &quot;Hello World!&quot;;
+    cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;
     return 0;
 &#125;</code></pre>
-<blockquote>
-<p>首先我们先看看第一排:</p>
-</blockquote>
+<ul>
+<li>代码分析:<br>  先看第一行:</li>
+</ul>
 <pre><code>#include &lt;iostream&gt;</code></pre>
-<blockquote>
-<p>这排有什么用呢? include在英语中是”包含”的意思,<br>“iostream”是C++里的一个头文件,顾名思义,<br>这一排是用来调用”iostream”这个头文件的,<br>那这个头文件又有什么用呢?我们稍后会提起。<br><br>再来看看第二排:</p>
-</blockquote>
-<pre><code>using namespace std;</code></pre>
-<blockquote>
-<p>同样的,这排代码翻译过来就是”使用命名空间std”的意思。<br>那这一排有什么用呢?同样,我们待会儿会和”iostream”一起提起。<br><br>接着,是第三排:</p>
-</blockquote>
-<pre><code>int main() &#123;</code></pre>
-<blockquote>
-<p>首先看看”int”,这个词在C++中是一个数据类型,用于储存整数,<br>而”main”翻译一下就是”主函数”的意思,在很多编程语言中都有<br>这个”main”,在这就不过多解释。<br>最后很显然最右边的花括号是和最后一排的花括号匹配的,所以<br>它们之间的代码都是主函数内的。<br><br>然后来到了重头戏,第四排:</p>
-</blockquote>
-<pre><code>cout &lt;&lt; &quot;Hello World!&quot;;</code></pre>
-<blockquote>
-<p>这排代码是这个程序的”主要工作者”,我们来慢慢分析。<br><br> 首先回顾一下前面的”iostream”和”std”:<br><br> iostream这个头文件,提供了标准输入输出流的语句,<br>也就是说,这个头文件,是用来输出文字的。<br><br> 而std是一个命名空间,也包含在iostream中,<br>里面有常用的标准输出流cout语句等等。<br>如果不写第二行,则这行代码就要写成:</p>
-</blockquote>
-<pre><code>std::cout &lt;&lt; &quot;Hello World!&quot;;</code></pre>
-<blockquote>
-<p><br> 最后来看最后一句:</p>
-</blockquote>
-<pre><code>return 0;</code></pre>
-<blockquote>
-<p>这一行的意思就是”返回一个0值”,<br>也就是告诉电脑:”我正常的运行完毕了”,<br>如果返回非零值,就是告诉电脑:”我遇到点问题,停止运行吧!”。</p>
-<p><br> 我们现在来简要的分析一下一个C++程序的基本结构:</p>
-</blockquote>
-<pre><code>1.头文件部分(准确来说,应该是预处理部分)
-2.命名空间部分
-3.主函数(其实在这之前,应该有一个定义函数的部分)</code></pre>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://snake-vink.github.io/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">上一章传送门</a></p>
-</blockquote>
+<br>
+        这行的"#include"并不是C++语句,而是C++的预处理语句。
+      前面的"#"是用来声明后面是预处理语句的。后面的"include"
+      翻译过来就是"包含"的意思。这句预处理语句有什么用呢？这句
+      "include"语句是用来引用头文件(Head file)的。头文件里
+      有一些声明(包含:函数,命名空间,宏定义,常亮...),引用头文
+      件就可以使用其中定义的一些东西。比如上面的"iostream"就
+      是一个头文件。
+        后面的"iostream"刚才说过,是一个头文件。拆分一下来看
+      的话,可以拆分为"i-o-stream",理解成"标准输入输出流"。
+      简单点说,就是只要你的程序要输入或输出,就要包含它。
+    再来看第二行:
 
+<pre><code>using namespace std;</code></pre>
+<br>
+        这行代码比较好理解,直接翻译它,就知道它的意思为"使用命
+      名空间std",那什么是命名空间呢？什么又是"std"呢？我们来
+      一一分析。
+        首先什么是命名空间？命名空间,是为了解决多人同时编写大
+      型程序时名字产生的冲突问题。比如A班与B班都有位同学叫做
+      张三,如果你要找A班的张三,光说名字是不行的,你必须要指明
+      是A班的张三,而不是B班的张三。而这里的A班、B班就相当于命
+      名空间,只要命名空间正确了,就不会发生冲突。
+        那什么是std？std也是一个命名空间,是英文"standard"
+      (标准)的缩写,看到这,有些人会不由自主的联系起前面的知识
+      来。没错,这里的std就是iostream中的一个命名空间,里面
+      定义了标准输入输出的语句,每一个C++算法程序都会用到它。
+    那下一行又是什么意思呢？
+
+<pre><code>int main() &#123;</code></pre>
+<br>
+        main()其实就是主函数,程序就是在执行里面的代码。那哪一
+      块是在main函数里面的呢？其实就是从main()后面的那一个
+      括号开始,一直到最后一排那个与其匹配的括号结束,都属于在
+      main()函数里。前面的int又是什么意思呢？其实就是指定
+      main()函数的返回值为整数类型,倒数第二排的return语句
+      就是用来返回值的。
+
+<pre><code>return 0;</code></pre>
+<br>
+        返回值又有什么用呢？在main()函数里,
+      <br>return如果返回0,则表示程序正常结束,否则表示程序中断
+      <br>运行,一般返回一个-1。
+    最后,来看倒数第三排:
+
+<pre><code>cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;</code></pre>
+<p><br>  这排有什么用呢?等待更新…</p>
+<hr>
+<h2 id="3-等待更新…"><a href="#3-等待更新…" class="headerlink" title="3. 等待更新…"></a>3. 等待更新…</h2>
             </div>
             <hr/>
 
@@ -542,7 +568,7 @@ int main() &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">http://yoursite.com/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</a>
+                    <a href="http://yoursite.com/2020/08/09/C++%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">http://yoursite.com/2020/08/09/C++%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,7 +652,7 @@ int main() &#123;
         repo: 'Snake-Vink.github.io',
         owner: 'Snake-Vink',
         admin: ["Snake-Vink"],
-        id: '2020-08-09T20-48-16',
+        id: '2020-08-09T19-22-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -655,19 +681,19 @@ int main() &#123;
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2020/08/09/%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
+                <a href="/2020/08/09/C++%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="程序基本结构与算术运算">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C++程序基本结构">
                         
-                        <span class="card-title">程序基本结构与算术运算</span>
+                        <span class="card-title">C++程序基本结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            程序基本结构与算术运算
+                            C++程序基本结构
                         
                     </div>
                     <div class="publish-info">
@@ -705,31 +731,31 @@ int main() &#123;
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/09/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">
+                <a href="/2020/08/05/Update-of-Vink/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="第一个C++程序">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="About some update of Vink">
                         
-                        <span class="card-title">第一个C++程序</span>
+                        <span class="card-title">About some update of Vink</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一个C++程序
+                            About some update of Vink
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E5%85%AC%E5%B8%83/" class="post-category">
+                                    公布
                                 </a>
                             
                             
@@ -739,8 +765,12 @@ int main() &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E5%85%AC%E5%B8%83/">
+                        <span class="chip bg-color">公布</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9B%B4%E6%96%B0/">
+                        <span class="chip bg-color">更新</span>
                     </a>
                     
                 </div>
@@ -753,6 +783,43 @@ int main() &#123;
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('64')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Vink<br />'
+            + 'Author: Snake-Vink<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -878,13 +945,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
