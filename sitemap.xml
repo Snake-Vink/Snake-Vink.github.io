@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://snake-vink.github.io/about/index.html</loc>
+    
+    <lastmod>2020-08-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://snake-vink.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-08-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://snake-vink.github.io/2020/08/26/%E9%85%8D%E7%BD%AEC++%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%20-%20DevC++/</loc>
     
     <lastmod>2020-08-27</lastmod>
@@ -12,20 +26,6 @@
     <loc>http://snake-vink.github.io/2020/08/11/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/</loc>
     
     <lastmod>2020-08-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://snake-vink.github.io/about/index.html</loc>
-    
-    <lastmod>2020-08-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://snake-vink.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-08-08</lastmod>
     
   </url>
   
