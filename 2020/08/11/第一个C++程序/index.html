@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh"><head>
+<!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
     <meta name="keywords" content="第一个C++程序, Vink">
     <meta name="description" content>
@@ -25,7 +25,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     <meta name="google-site-verification" content="6SemZlYl9D1dxR2owiiS7zwqqlh48LxjHt-0usHKh4I">
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -150,7 +150,7 @@
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -500,7 +500,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:  
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
                     2020-08-11
                 </div>
                 
@@ -531,35 +531,20 @@
 <li>题目描述:<br>  编写一个程序,输出”Hello World!”</li>
 <li>样例代码:</li>
 </ul>
-<pre><code>#include <iostream>
-using namespace std;
-int main() {
-    cout << "Hello World!" << endl;
-    return 0;
-}</iostream></code></pre>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> ‹iostream›</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>｛
+    cout <span class="token operator"><<</span> <span class="token string">"Hello World!"</span> <span class="token operator"><<</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+｝</code></pre>
 <ul>
-<li>代码分析:<br>先看一下第一二行:</li>
+<li>代码分析:<br>先看一下第一二行:<pre class=" language-cpp"><code class="language-cpp">  <span class="token macro property">#<span class="token directive keyword">include</span> ‹iostream›</span>
+  <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span></code></pre>
+这两行现在不用深究,只用知道一般C++程序都要包含这两行,我们将会在以后的章节讲述。<pre class=" language-cpp"><code class="language-cpp">  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>｛</code></pre>
+这行的main()其实就是主函数,程序就是在执行里面的代码。那哪一块是在main函数里面的呢？其实就是从main()后面的那一个括号开始,一直到最后一排那个与其匹配的括号结束,都属于在main()函数里。前面的int又是什么意思呢？其实就是指定main()函数的返回值为整数类型,倒数第二排的return语句就是用来返回值的。<pre class=" language-cpp"><code class="language-cpp">  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></code></pre>
+返回值又有什么用呢？在main()函数里,return如果返回0,则表示程序正常结束,否则表示程序中断运行,一般返回一个-1。<br>最后,来看倒数第三排:<pre class=" language-cpp"><code class="language-cpp">  cout <span class="token operator"><<</span> <span class="token string">"Hello World!"</span> <span class="token operator"><<</span> endl<span class="token punctuation">;</span></code></pre>
+这排有什么用呢?这排是这个程序的核心。”cout”的作用是”标准输出流”,而后面的”endl”表示输出一个换行符,剩余的知识将会在下几章中讲述。</li>
 </ul>
-<pre><code>#include <iostream>
-using namespace std;</iostream></code></pre>
-<br>
-  这两行现在不用深究,只用知道一般C++程序都要包含这两行,我们将会在以后的章节讲述。
-<br>
-
-<pre><code>int main() {</code></pre>
-<br>
-  这行的main()其实就是主函数,程序就是在执行里面的代码。那哪一块是在main函数里面的呢？其实就是从main()后面的那一个括号开始,一直到最后一排那个与其匹配的括号结束,都属于在main()函数里。前面的int又是什么意思呢？其实就是指定main()函数的返回值为整数类型,倒数第二排的return语句就是用来返回值的。
-
-<pre><code>return 0;</code></pre>
-<br>
-  返回值又有什么用呢？在main()函数里,return如果返回0,则表示程序正常结束,否则表示程序中断运行,一般返回一个-1。
-<br>
-  最后,来看倒数第三排:
-
-<pre><code>cout << "Hello World!" << endl;</code></pre>
-<br>
-  这排有什么用呢?这排是这个程序的核心。"cout"的作用是"标准输出流",而后面的"endl"表示输出一个换行符,剩余的知识将会在下几章中讲述。
-
 <hr>
 <h2 id="3-结语"><a href="#3-结语" class="headerlink" title="3. 结语"></a>3. 结语</h2><hr>
 <p>  这一章是C++笔记的第一章,只讲了一道例题。本章内容较短,知识量较少,主要是面向新手。如果文中有需修改或增添的,请在下方评论区评论,我们会及时改正,谢谢!<br>(附:github本章例题地址:<a target="_blank" rel="noopener" href="https://github.com/Snake-Vink/C-plus-plus-note/blob/master/Hello%20World.cpp">传送门</a>)</p>
@@ -574,7 +559,7 @@ using namespace std;</iostream></code></pre>
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -584,7 +569,7 @@ using namespace std;</iostream></code></pre>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -594,13 +579,13 @@ using namespace std;</iostream></code></pre>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint polocy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">Snake-Vink</a>
                     !
                 </span>
@@ -610,7 +595,7 @@ using namespace std;</iostream></code></pre>
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -698,7 +683,7 @@ using namespace std;</iostream></code></pre>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i> Previous</div>
+                <i class="fas fa-chevron-left"></i> 上一篇</div>
             <div class="card">
                 <a href="/2020/08/26/%E9%85%8D%E7%BD%AEC++%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%20-%20DevC++/">
                     <div class="card-image">
@@ -745,7 +730,7 @@ using namespace std;</iostream></code></pre>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current <i class="far fa-dot-circle"></i>
+                本篇 <i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2020/08/11/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">
@@ -824,9 +809,9 @@ using namespace std;</iostream></code></pre>
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: Vink<br />'
-            + 'Author: Snake-Vink<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '来源: Vink<br />'
+            + '文章作者: Snake-Vink<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
         selection.selectAllChildren(newdiv);
@@ -863,7 +848,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget">
-            <div class="toc-title"><i class="far fa-list-alt"></i>  TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>  目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1056,8 +1041,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>  Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+            <span class="title"><i class="fas fa-search"></i>  搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>
