@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: C++, Vink">
+    <meta name="keywords" content="web, Vink">
     <meta name="description" content>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: C++ | Vink</title>
+    <title>web | Vink</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -369,7 +369,29 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+    .baidu {
+        outline: none;
+    }
+    .bing {
+        outline: none;
+    }
+    .google {
+        outline: none;
+    }
+    .360 {
+        outline: none;
+    }
+    .sougou {
+        outline: none;
+    }
+</style>
+
+<div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -414,102 +436,41 @@
 </div>
 
 <main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>  文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/C/" title="C++: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active " data-tagname="C++" style="background-color: #F9EBEA;">C++
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+                <script type="text/javascript">
+                    function baidu_get() {
+                        var value = document.getElementById("urls").value;
+                        window.open("https://www.baidu.com/s?cl=3&wd=" + value);
+                    }
+                    function bing_get() {
+                        var value = document.getElementById("urls").value;
+                        window.open("https://cn.bing.com/search?q=" + value + "&qs=n&form=QBRE&sp=-1&pq=&sc=8-0&sk=&cvid=CCAD6FAC39C34D208330A30F1893B482");
+                    }
+                    function google_get() {
+                        var value = document.getElementById("urls").value;
+                        window.open("https://www.google.com/search?q=" + value + "&oq=" + value + "&aqs=chrome.0.69i59j0l4j69i60l3.166j0j1&sourceid=chrome&ie=UTF-8");
+                    }
+                    function 360_get() {
+                        var value = document.getElementById("urls").value;
+                        window.open("https://www.so.com/s?src=lm&ls=sm2054017&lm_extend=ctype:4&q=" + value);
+                    }
+                    function sougou_get() {
+                        var value = document.getElementById("urls").value;
+                        window.open("https://www.sogou.com/sogou?isource=infinity&iname=sogou&itype=web&pid=sogou-site-7985672db979303a&query=" + value);
+                    }
+                </script>
+                <button class="baidu" onclick="baidu_get()">百度</button>
+                <button class="bing" onclick="bing_get()">必应</button>
+                <button class="google" onclick="google_get()">谷歌</button>
+                <button class="360" onclick="360_get()">360</button>
+                <button class="sougou" onclick="sougou_get()">搜狗</button>
+                <input name="urls" id="urls">
             </div>
         </div>
     </div>
-</div>
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="C++" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2020/08/26/%E9%85%8D%E7%BD%AEC++%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%20-%20DevC++/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=355986210,1001694833&fm=26&gp=0.jpg" class="responsive-img" alt="配置C++编译环境 - DevC++">
-                            
-                            <span class="card-title">配置C++编译环境 - DevC++</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/C/" class="post-category">
-                                C++
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="C++" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2020/08/11/%E7%AC%AC%E4%B8%80%E4%B8%AAC++%E7%A8%8B%E5%BA%8F/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://www.cxyxiaowu.com/wp-content/uploads/2020/04/1587885670-2e1c2fadd889981.png" class="responsive-img" alt="第一个C++程序">
-                            
-                            <span class="card-title">第一个C++程序</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/C/" class="post-category">
-                                C++
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
-
-
 
 
     <footer class="page-footer bg-color">
