@@ -374,21 +374,6 @@
     .about-cover {
         height: 75vh;
     }
-    .baidu {
-        outline: none;
-    }
-    .bing {
-        outline: none;
-    }
-    .google {
-        outline: none;
-    }
-    .360 {
-        outline: none;
-    }
-    .sougou {
-        outline: none;
-    }
 </style>
 
 <div class="bg-cover pd-header about-cover">
@@ -452,20 +437,10 @@
                         var value = document.getElementById("urls").value;
                         window.open("https://www.google.com/search?q=" + value + "&oq=" + value + "&aqs=chrome.0.69i59j0l4j69i60l3.166j0j1&sourceid=chrome&ie=UTF-8");
                     }
-                    function 360_get() {
-                        var value = document.getElementById("urls").value;
-                        window.open("https://www.so.com/s?src=lm&ls=sm2054017&lm_extend=ctype:4&q=" + value);
-                    }
-                    function sougou_get() {
-                        var value = document.getElementById("urls").value;
-                        window.open("https://www.sogou.com/sogou?isource=infinity&iname=sogou&itype=web&pid=sogou-site-7985672db979303a&query=" + value);
-                    }
                 </script>
-                <button class="baidu" onclick="baidu_get()">百度</button>
-                <button class="bing" onclick="bing_get()">必应</button>
-                <button class="google" onclick="google_get()">谷歌</button>
-                <button class="360" onclick="360_get()">360</button>
-                <button class="sougou" onclick="sougou_get()">搜狗</button>
+                <button onclick="baidu_get()">百度</button>
+                <button onclick="bing_get()">必应</button>
+                <button onclick="google_get()">谷歌</button>
                 <input name="urls" id="urls">
             </div>
         </div>
